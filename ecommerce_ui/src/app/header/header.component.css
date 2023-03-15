@@ -1,0 +1,38 @@
+.box {
+    display: inline; 
+  }
+
+.topnav {
+  background-color: green;  
+  position: fixed;  
+  left: 0;  
+  right: 0;  
+  top: 5px;  
+  height: 30px;  
+  display: flex;  
+  align-items: center;  
+  box-shadow: 0 0 25px 0 black;  
+}
+
+.ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.eachBox {
+    flex: 1;
+}
+.text{
+  color:white;
+}
+.liStyle{
+  margin: 20px; 
+}
+
+.menu {
+  display: flex;
+  gap: 3em;
+  font-size: 18px;
+}

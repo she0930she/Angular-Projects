@@ -1,0 +1,22 @@
+.title{
+    font-weight: bold;
+}
+
+.sizePic{
+    width:250px;
+    height:150px;
+}
+
+.container{
+    text-align: center;
+}
+.red{
+    color:red;
+    background-color: beige;
+}
+.green{
+    color:green;
+}
+.blue{
+    color: rgb(0, 128, 255);
+}

@@ -1,0 +1,14 @@
+.bottomBlock {
+    background-color: green;    
+    left: 0;  
+    right: 0;  
+    top: 5px;  
+    height: 30px;  
+    display: flex;  
+    align-items: center;  
+    box-shadow: 0 0 1px 0 black;  
+  }
+
+  .text{
+    text-align: center; 
+  }

@@ -1,0 +1,12 @@
+
+
+<div class="outerBox">
+  <h1 title="title" >Product</h1>
+
+<form class="post-form" [formGroup]="productForm" (ngSubmit)="createProduct()">
+    <input type="text" placeholder="product Id" formControlName="productId"/><br><br>
+    <input type="text" placeholder="product Name" formControlName="productName"/><br><br>
+    <input type="text" placeholder="product Cost" formControlName="productCost"/><br><br>
+    <input class="btn" type="submit" value="Submit">
+  </form>
+</div>

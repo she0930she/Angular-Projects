@@ -1,0 +1,55 @@
+<p title="title">Welcome home page</p>
+
+<div class="container">
+<img class="sizePic" src="./assets/dachshund1.jpeg" alt="dachshund1">
+</div>
+
+
+
+<!-- <NgIf></NgIf> -->
+<!-- <div *ngIf="isNeeded">
+</div> -->
+
+<div *ngIf="true">
+  only render if the *isNeeded value has true value
+</div>
+
+<!-- <div *ngIf="myTester">
+    myTester works
+  </div> -->
+
+  <div *ngIf="isLoggedIn ; else loggedOut">
+    Welcome back
+  </div>
+  
+  <ng-template #loggedOut>
+    Please login
+  </ng-template><br>
+
+  <tr *ngFor="let num of listData">
+    <td [ngClass]="num%2 == 0? 'red':'green'" >{{num}}</td>
+  </tr>
+
+  <tr *ngFor="let item of heroes">
+    <td [ngClass]="item.id%2 == 0? 'blue':'green'" >{{item.id}}:{{item.name}}</td>
+  </tr>
+
+  <tr *ngFor="let item of heroes">
+    <!-- style got manipulated -->
+    <div [ngStyle]="{'background-color': item.name === 'batman' ? 'green': 'red' }" >  
+    <!-- <div [ngStyle]="{'background-color':  'green'}" >   -->
+      <td>{{item.id}}:{{item.name }}</td>
+    </div>
+
+    <tr *ngFor="let item of heroes">
+      <!-- style got manipulated -->
+      <!-- <div [ngStyle]="{'background-color': item.name === 'batman' ? 'green': 'red' }" >   -->
+      <div [ngStyle]="{'background-color':  'green'}" >  
+        <td>{{item.id | currency }}:{{item.name | uppercase}}</td>
+      </div>
+
+    
+   
+  </tr>
+ 
+  

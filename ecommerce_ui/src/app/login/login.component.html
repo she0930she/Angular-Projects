@@ -1,0 +1,46 @@
+<div *ngIf="!isFormSubmitted ; else loggedOut">
+<div class="outerBox">
+  <h1 class="title">Login</h1>
+
+
+
+
+
+<!-- form builder -->
+
+<form [formGroup]="profileForm" (ngSubmit)="logIn()">
+
+    <label for="fname">Name: </label><br>
+    <input type="text" placeholder="username" formControlName="username"><br><br>
+    <label for="lname">Password: </label><br>
+    <input type="text" placeholder="password" formControlName="password"><br><br>
+    <input class="btn" type="submit" value="Submit">
+  
+  </form>
+</div>
+</div>
+{{message}}
+
+<!-- <h3>user: {{user.username}}</h3> 
+<h3>user: {{user.password}}</h3>  -->
+
+<button class="getRecordBtn" (click)="getAllData()">get all records</button>
+<h3>All records:</h3>
+<h3>{{info}}</h3>
+<table>
+<tr>
+  <th>id</th>
+  <th>name</th>
+  <th>password</th>
+</tr>
+<tr *ngFor="let user of users">
+  <td>{{user.id}}</td>
+  <td>{{user.username}}</td>
+  <td>{{user.password}}</td>
+</tr>
+
+<!-- <div *ngIf="isFormSubmitted"><h1>Amazing! we got your credentials</h1></div> -->
+
+<ng-template #loggedOut>
+  <h1>Amazing! we got your credentials</h1>
+</ng-template>
